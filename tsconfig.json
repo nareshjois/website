@@ -1,0 +1,9 @@
+{
+  "extends": "astro/tsconfigs/strictest",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "moduleResolution": "Node",
+    "target": "ES2022",
+    "esModuleInterop": true
+  }
+}
