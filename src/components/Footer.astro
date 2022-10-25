@@ -3,7 +3,9 @@ const today = new Date();
 ---
 
 <footer>
-  &copy; {today.getFullYear()} Naresh.Jois. | All rights reserved | Built using <a href="https://astro.build/">Astro</a>
+  Naresh Jois. &copy; {today.getFullYear()} • All rights reserved
+  <br/>
+  Built using <a href="https://astro.build/">Astro</a>
 </footer>
 <style>
   footer {
@@ -12,7 +14,6 @@ const today = new Date();
   }
 </style>
 <script>
-  import { ColorPalette } from "../scripts/color-palette";
-  const palette = new ColorPalette();
-  palette.setCustomProperties();
+  import { Init } from "../scripts/orbs";
+  Init();
 </script>

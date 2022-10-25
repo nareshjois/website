@@ -13,8 +13,8 @@ export class ColorPalette {
   complimentaryColor1: string;
   complimentaryColor2: string;
   colorChoices: string[] = [];
-  constructor() {
-    this.hue = ~~random(220, 360);
+  constructor(color: string | null) {
+    this.hue = color ? parseInt(color) : ~~random(220, 360);
     this.complimentaryHue1 = this.hue + 30;
     this.complimentaryHue2 = this.hue + 60;
     // define a fixed saturation and lightness

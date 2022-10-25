@@ -4,6 +4,7 @@
     "resolveJsonModule": true,
     "moduleResolution": "Node",
     "target": "ES2022",
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "allowJs": true
   }
 }

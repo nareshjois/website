@@ -2,26 +2,26 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Kailasa Temple"
 description: ""
-pubDate: "2009-03-09T18:55:02.000Z"
-heroImage: "/content/images/2013/Dec/kailasa_temple.jpg"
+pubDate: "2006-12-08 06:30:00"
+heroImage: ""
 slug: "kailasa-temple"
 ---
 
 Kailasa Temple situated in caves at Ellora, was carved to represent the Kailasa Mountain, which is believed to be the home of Lord Shiva, the god of destruction.
 
-> This temple is more of a marvel than a mystery, but coming to thing, it is the largest monolithic structure in the world, carved top-down from a single rock. It contains the largest cantilevered rock ceiling in the world.
+**This temple is more of a marvel than a mystery, but coming to thing, it is the largest monolithic structure in the world, carved top-down from a single rock. It contains the largest cantilevered rock ceiling in the world.**
 
 The scale at which the work was undertaken is enormous. It covers twice the area of the Parthenon in Athens and is 1.5 times high, and it entailed removing 200,000 tonnes of rock. It is believed to have taken 7,000 labourers 150 years to complete the project.
 
 The rear wall of its excavated courtyard 276 feet (84 m) 154 feet (47 m) is 100 ft (33 m) high. The temple proper is 164 feet (50 m) deep, 109 feet (33 m) wide, and 98 feet (30 m) high.
 
 It consists of a gateway, antechamber, assembly hall, sanctuary and tower. Virtually every surface is lavishly embellished with symbols and figures from the puranas (sacred Sanskrit poems). The temple is connected to the gallery wall by a bridge.
-
-## More Info on Ajantha and Ellora.
+![](/content/images/2013/Dec/kailasa_temple.jpg)
+##More Info on Ajantha and Ellora.
 
 Ajanta and nearby Ellora are two of the most amazing archaeological sites in India. Although handcrafted caves are scattered throughout India's western state of Maharashtra, the complexes at Ajanta and Ellora - roughly 300 kilometres northeast of Mumbai (Bombay) - are the most elaborate and varied examples known. The caves aren't natural caves, but man-made temples cut into a massive granite hillside. They were built by generations of Buddhist, Hindu, and Jain monks, who lived, worked, and worshipped in the caves, slowly carving out elaborate statues, pillars, and meditation rooms.
 
-## Ajanta Caves
+##Ajanta Caves
 
 Ajanta (more properly Ajujnthi), a village in the erstwhile dominions of the Nizam of Hyderabad in India and now in Buldhana district in the state of Maharashtra
 (N. lat. 20 deg. 32' by E. long. 75 deg. 48') is celebrated for its cave hermitages and halls.
@@ -39,7 +39,7 @@ The seventh century abandonment of these masterpieces is a mystery. Perhaps the 
 
 Some sources suggest that remnants of the Ajanta colony relocated to Ellora, a site closer to an important caravan route. There, another series of handcrafted caves chronologically begins where the Ajanta caves end.
 
-## Ellora Caves
+##Ellora Caves
 
 Near Ellora , village in E central Maharashtra state, India, extending more than 1.6 km on a hill, are 34 rock and cave temples (5th–13th century).
 

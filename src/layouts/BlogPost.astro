@@ -2,7 +2,8 @@
 import BaseHead from "../components/BaseHead.astro";
 import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-
+import HeroImage from "../components/HeroImage.astro";
+import dayjs from "dayjs";
 export interface Props {
   content: {
     title: string;
@@ -10,27 +11,37 @@ export interface Props {
     pubDate?: string;
     updatedDate?: string;
     heroImage?: string;
-	posterImage?: string;
+    posterImage?: string;
   };
 }
 
 const {
   content: { title, description, pubDate, updatedDate, heroImage, posterImage },
 } = Astro.props;
+const date = dayjs(pubDate).format("YYYY, MMM DD");
 ---
 
 <html lang="en">
   <head>
+    <script is:inline src="https://kit.fontawesome.com/afa8e0f95c.js" crossorigin="anonymous"></script>
     <BaseHead title={title} description={description} />
   </head>
 
   <body>
+    <canvas class="orb-canvas"></canvas>
     <Header />
-	{heroImage && <div class="hero-image"><img style="width: 100%" src={heroImage} alt="" /></div>}
-    <main>
+    <HeroImage image={heroImage}/>
+    <main> 
       <article>
         <h1 class="title">{title}</h1>
-        {pubDate && <div class="article-date"><time>{pubDate}</time></div>}
+        <div class="article-date">
+          {date
+            && (
+            <time>{date}</time>
+           )
+         }
+        </div>
+       
         {
           updatedDate && (
             <article-date>
@@ -38,12 +49,16 @@ const {
             </article-date>
           )
         }
-        <article-body>
-		  {posterImage && <div class="poster-image">
-			<img src={posterImage} style="height: 300px" alt={title}/>
-		  </div>}
+        <div>
+          {
+            posterImage && (
+              <div class="poster-image">
+                <img src={posterImage} style="height: 300px" alt={title} />
+              </div>
+            )
+          }
           <slot />
-        </article-body>
+        </div>
       </article>
     </main>
     <Footer />

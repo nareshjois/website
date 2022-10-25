@@ -1,7 +1,7 @@
 import SimplexNoise from "simplex-noise";
 import debounce from "debounce";
 import { random } from "./random";
-import PIXI from "pixi.js";
+import * as PIXI from "pixi.js";
 import { map } from "./map";
 import { ColorPalette } from "./color-palette";
 import { KawaseBlurFilter } from "@pixi/filter-kawase-blur";
@@ -115,7 +115,8 @@ class Orb {
 }
 
 export const Init = () => {
-  const colorPalette = new ColorPalette();
+  const color = (document.querySelector(".hero-image") as HTMLDivElement)?.dataset?.["color"] ?? null;
+  const colorPalette = new ColorPalette(color);
   const app = new PIXI.Application({
     // render to <canvas class="orb-canvas"></canvas>
     view: document.querySelector(".orb-canvas") as HTMLCanvasElement,
@@ -136,7 +137,7 @@ export const Init = () => {
   }
 
   // Animate!
-  if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+ if (!window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
     app.ticker.add(() => {
       orbs.forEach((orb) => {
         orb.update();
@@ -149,4 +150,5 @@ export const Init = () => {
       orb.render();
     });
   }
+  colorPalette.setCustomProperties();
 };
