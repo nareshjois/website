@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Kailasa Temple"
 description: ""
-pubDate: "2009-03-09T18:55:02.000Z"
-heroImage: "/content/images/2013/Dec/kailasa_temple.jpg"
+pubDate: "2006-12-08T18:55:02.000Z"
+heroImage: "/content/images/2006/kailasa_temple.jpg"
 slug: "kailasa-temple"
+tags: ["Mysteries","History"]
 ---
 
 Kailasa Temple situated in caves at Ellora, was carved to represent the Kailasa Mountain, which is believed to be the home of Lord Shiva, the god of destruction.

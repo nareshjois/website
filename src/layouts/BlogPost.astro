@@ -12,43 +12,53 @@ export interface Props {
     updatedDate?: string;
     heroImage?: string;
     posterImage?: string;
+    tags?: string[];
   };
 }
 
 const {
-  content: { title, description, pubDate, updatedDate, heroImage, posterImage },
+  content: {
+    title,
+    description,
+    pubDate,
+    updatedDate,
+    heroImage,
+    posterImage,
+    tags,
+  },
 } = Astro.props;
 const date = dayjs(pubDate).format("YYYY, MMM DD");
+const tagsString = (tags ?? []).join(" • ");
 ---
 
 <html lang="en">
   <head>
-    <script is:inline src="https://kit.fontawesome.com/afa8e0f95c.js" crossorigin="anonymous"></script>
+    <script
+      is:inline
+      src="https://kit.fontawesome.com/afa8e0f95c.js"
+      crossorigin="anonymous"
+    ></script>
     <BaseHead title={title} description={description} />
   </head>
 
   <body>
     <canvas class="orb-canvas"></canvas>
     <Header />
-    <HeroImage image={heroImage}/>
-    <main> 
+    <HeroImage image={heroImage} />
+    <main>
       <article>
         <h1 class="title">{title}</h1>
         <div class="article-date">
-          {date
-            && (
-            <time>{date}</time>
-           )
-         }
+          {date && <time>{date}</time>}
+          {
+            updatedDate && (
+              <time>
+                Last updated on <time>{updatedDate}</time>
+              </time>
+            )
+          }
+          {tagsString && <span> • {tagsString}</span>}
         </div>
-       
-        {
-          updatedDate && (
-            <article-date>
-              Last updated on <time>{updatedDate}</time>
-            </article-date>
-          )
-        }
         <div>
           {
             posterImage && (
