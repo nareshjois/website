@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "My new home computer"
 description: ""
-pubDate: "2007-10-13 13:55:36"
+pubDate: "2007-10-13T13:55:36.000Z"
 heroImage: ""
 slug: "my-new-home-computer"
+tags: ["Random"]
 ---
 
 I do remember a lot of time ago i wrote a post about how to an mid range Vista Premium system for under 50K well now I got my home one for around 50% of that amount.

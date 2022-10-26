@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "War of the Worlds"
 description: ""
-pubDate: "2007-12-19 11:38:31"
+pubDate: "2007-12-19T11:38:31.000Z"
 heroImage: ""
 slug: "war-of-the-worlds"
+tags: ["Science"]
 ---
 
 The latest act of senseless violence caught on tape is cosmic in scope: A black hole in a "death star galaxy" blasting a neighboring galaxy with a deadly jet of radiation and energy. A fleet of space and ground telescopes have captured images of this cosmic violence, which people have never witnessed before, according to a new study released Monday by NASA.

@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Geni.com"
 description: ""
-pubDate: "2007-12-17 20:54:55"
+pubDate: "2007-12-17T20:54:55.000Z"
 heroImage: ""
 slug: "genicom"
+tags: ["Random"]
 ---
 
 ![Geni](http://geni1-mhcache-com-myheritage.netdna-ssl.com/images/logo_tag.png)

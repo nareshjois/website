@@ -2,7 +2,7 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Sony Ericsson Bluetooth Watch"
 description: ""
-pubDate: "2006-12-20 11:33:57"
+pubDate: "2006-12-20T11:33:57.000Z"
 heroImage: "/content/images/2006/Sony_Ericsson_MBW_100_a_Bluetooth_watch__large.jpg"
 slug: "sony-ericsson-bluetooth-watch"
 tags: ["Tech"]

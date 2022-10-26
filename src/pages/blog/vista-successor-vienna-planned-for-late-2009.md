@@ -1,6 +1,6 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Vista successor "Vienna" planned for late 2009"
+title: "Vista successor “Vienna” planned for late 2009"
 description: ""
 pubDate: "2007-02-12T11:54:10.000Z"
 heroImage: ""

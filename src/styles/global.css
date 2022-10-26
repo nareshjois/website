@@ -120,6 +120,11 @@ blockquote > p {
   padding-left: 2rem;
 }
 
+pre {
+  word-break: break-all;
+  white-space: break-spaces;
+}
+
 h1 {
   font-size: 3rem;
   line-height: 3.5rem;

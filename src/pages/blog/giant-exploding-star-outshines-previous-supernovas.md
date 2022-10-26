@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Giant exploding star outshines previous supernovas"
 description: ""
-pubDate: "2007-06-04 11:22:54"
+pubDate: "2007-06-04T11:22:54.000Z"
 heroImage: ""
 slug: "giant-exploding-star-outshines-previous-supernovas"
+tags: ["Science"]
 ---
 
 Scientists have just released images of the brightest stellar explosion recorded.
@@ -13,9 +14,11 @@ The supernova, known as SN 2006gy, was believed to be about 150 times as massive
 
 The explosion could help astronomers better understand how the first generation of stars in the universe died.
 
-"This supernova stands out as the brightest supernova that's ever been observed," said Nathan Smith, astrophysicist at the University of California at Berkeley.
+> "This supernova stands out as the brightest supernova that's ever been observed," 
+said Nathan Smith, astrophysicist at the University of California at Berkeley.
 
-"The reason we're so excited is because it was so powerful we think it may require a new type of explosion mechanism that we've never observed before," said Smith at a news conference from NASA headquarters in Washington.
+> "The reason we're so excited is because it was so powerful we think it may require a new type of explosion mechanism that we've never observed before," 
+said Smith at a news conference from NASA headquarters in Washington.
 
 A supernova is a rare and often dramatic phenomenon that involves the explosion of most of the material within a star. Supernovas can be very bright for a short time and usually release huge amounts of energy.
 

@@ -2,12 +2,11 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Tilera debuts its sixty-four core processor"
 description: ""
-pubDate: "2007-08-21 14:13:32"
-heroImage: ""
+pubDate: "2007-08-21T14:13:32.000Z"
+heroImage: "/content/images/2007/tilera.jpg"
 slug: "tilera-debuts-its-sixty-four-core-processor"
+tags: ["Tech"]
 ---
-
-<img src="http://www.blogsmithmedia.com/www.engadget.com/media/2007/08/tilera_425.jpg" alt="" width="425" height="242" />
 
 <strong> Silicon Valley startup Tilera today announced the Tile64, a processor with 64 programmable cores that, according to the company, houses ten times the performance and 30 times the power efficiency of Intel's dual-core Xeon processors.</strong>
 
@@ -18,10 +17,6 @@ The Tile64 is a 90 nm RISC-based processor clocked between 600 MHz and 1 GHz  ai
 Other than for example Intel's Core architecture, which is expected to soon be running into a bottleneck caused by its centralized bus architecture (which acts as communication node between all cores), Tilera's cores can exchange data with all other cores through a "mesh" architecture. Each of the 64 tiles consists of a CPU unit, a cache unit and a switch, which can send information into four directions to neighboring "tiles". Each tile has a bandwidth of 500 Gb/s, with the Tile64's aggregate bandwidth topping out at 32 Tb/s.
 
 Besides the fact that Tilera claims that it has untangled a data traffic mess that otherwise would have surrounded a central bus, the company has come up with an interesting and flexible cache architecture for the tiles, each of which is able to act as a fully functioning system that can run an operating system. Each tile integrates two 8 KB L1 caches (8 KB iL1, 8 KB dL1) as well as a 64 KB L2 cache. There is no L3 cache per se, but if required by the application, a software developer can utilize all L1 and L2 caches as one 5 MB L3 cache.
-<p class="mosimage" align="center"><img src="http://www.tgdaily.com/images/stories/article_images/processor/tilera2_425.jpg" border="0" alt="Image" hspace="6" width="425" height="275" /></p>
-<p class="mosimage_caption" style="text-align:left;" align="left">Tile64 layout with 8x8 tiles and ...</p>
-<p class="mosimage" align="center"><img src="http://www.tgdaily.com/images/stories/article_images/processor/tilera3_425.jpg" border="0" alt="Image" hspace="6" width="425" height="282" /></p>
-<p class="mosimage_caption" style="text-align:left;" align="left">... the layout of one tile in detail.</p>
 
 The result is a claimed performance that is ten times what a dual-core Xeon offers, while performance per watt is exceeding the Xeon by 30x. The manufacturer states that each tile consumes a maximum of 300 mWatt, which translates into a maximum power consumption of 19.2 watts per Tile64 chip. Still, there is enough horsepower to encode eight parallel standard definition video streams at  2 Mb/s per stream, two high definition 720p streams at 7 Mb/s each or one 1080p video stream at 20 Mb/s.
 

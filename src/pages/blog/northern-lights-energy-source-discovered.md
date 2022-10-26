@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Northern Lights energy source discovered"
 description: ""
-pubDate: "2007-12-19 11:44:02"
+pubDate: "2007-12-19T11:44:02.000Z"
 heroImage: ""
 slug: "northern-lights-energy-source-discovered"
+tags: ["Science"]
 ---
 
 Scientists think they have discovered the energy source of auroras borealis, the spectacular color displays seen in the upper latitudes of the Northern Hemisphere. New data from NASA's Themis mission, a quintet of satellites launched this winter, found the energy comes from a stream of charged particles from the sun flowing like a current through twisted bundles of magnetic fields connecting Earth's upper atmosphere to the sun.
