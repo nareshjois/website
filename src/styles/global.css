@@ -172,6 +172,10 @@ p:has(img) > img {
 }
 
 
+.gist { width:800px !important;}
+.gist-file
+.gist-data {max-height: 800px;max-width: 800px;}
+
 .top-nav {
 
   background-color: #ffffff66;
