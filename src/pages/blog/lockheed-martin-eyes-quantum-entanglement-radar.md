@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Lockheed Martin eyes Quantum entanglement radar"
 description: ""
-pubDate: "2007-03-12 13:51:26"
+pubDate: "2007-03-12T13:51:26.000Z"
 heroImage: ""
 slug: "lockheed-martin-eyes-quantum-entanglement-radar"
+tags: ["Science"]
 ---
 
 The (in)famous defense contractor Lockheed Martin has apparently hit the loony sauce a bit too quickly on its latest patent application. In a proposed effort to concoct the ultimate omniscient radar, the firm is suggesting that it can break the boundaries of theoretical physics and create a "quantum entanglement" scanner that can 

@@ -1,9 +1,10 @@
 ---
 layout: "../../layouts/BlogPost.astro"
-title: "Fujitsu Announces World's First 300GB 2.5" Hard Disk Drive"
+title: "Fujitsu Announces World's First 300GB 2.5” Hard Disk Drive"
 description: ""
-pubDate: "2006-12-13 12:36:04"
+pubDate: "2006-12-13T12:36:04.000Z"
 heroImage: ""
+tags: ["Tech"]
 slug: "fujitsu-announces-worlds-first-300gb-25-hard-disk-drive"
 ---
 

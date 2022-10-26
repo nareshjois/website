@@ -2,16 +2,17 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Australia's Mystery Animals"
 description: ""
-pubDate: "2006-12-12 15:34:08"
-heroImage: ""
+pubDate: "2006-12-12T15:34:08.000Z"
+heroImage: "/content/images/2006/tiger.jpg"
 slug: "australias-mystery-animals"
+tags: ["Mysteries","History"]
 ---
 
 While most scientists solemnly declare that the Queensland Tiger and the Tasmanian Tiger—marsupial predators which survived into recent times in Australia, to be extinct—each year, members of the public report seeing the creature in remote areas of Tasmania and mainland Australia.
 Although Thylacines, or Tasmanian Tigers, supposedly died out in New Guinea 10,000 years ago, and on the Australian mainland as recently as 3,000 years ago, the animal lived on into the 20th century in Tasmania, the last one dying in captivity in 1936. However, ever since then, people have continued to report encounters with Thylacines, including a sighting in 1995 by a Parks and Wildlife Service officer in the Pyengana region of eastern Tasmania.
 Although the Tasmanian Parks and Wildlife Service, World Wildlife Fund, and even the Walt Disney Film Company have been monitoring and investigating recent reports of sightings, various search parties have thus far failed either to capture or film a living Thylacine.
 
-Evidence for the Queensland Tiger
+## Evidence for the Queensland Tiger
 In the 19th century, there were several livestock killings associated with Queensland Tiger of Australia’s far northern tropical rain forests. So in the 1940s and 1950s, when a wave of sightings of a striped, tigerlike beast erupted to the south of North Queensland’s tropical rain forests, the tigers were killed to extinction… or so it was believed.
 Like the Thylacine, the Queensland Tiger has been seen numerous times since the 1950s, although no specimen has yet been captured or photographed.
 Some think these animals may be a surviving remnant of Thylacoleo carnifex, the fearsome “Marsupial Lion,” a creature that stalked the forests of Ice Age Australia. Farmers in the mountains of Victoria refer to the creature as the “Big Cats,” although some insist that what they are seeing are actually North American mountain lions. Many, however, say that while the creature looks superficially like a puma or a panther, on close inspection, it most definitely is no cat.
@@ -23,8 +24,8 @@ They can supposedly spring up to 30 feet from a standing start. In flight, their
 These Australian “lions” may primarily be tree-lovers, but reports of them come in even from the remotest corners of the Australian desert. There, the creature is frequently reported as tan colored and sporting either prominent stripes or spots.
 One thing is certain, Australia is not short on animal mysteries that claim the interest of many researchers.
 
-A Young Woman’s Search for the Queensland Tiger
+## A Young Woman’s Search for the Queensland Tiger
 In 2002-2003, Debbie Hynes, a high school student from Victoria, Australia, led several expeditions in search of the supposedly extinct Thylacoleo. Hynes first heard the tale of the Queensland Tiger several years ago when on vacation in the Victorian mountains. The yarn fascinated her and since then, she has endeavored to track and photograph one, mainly on expeditions into the wilderness during term breaks. The result? She has found some tracks and evidence of it killing many farm animals, but she has yet to capture one on film.
->“The creature’s seasonal movements are easy to track, says Hynes. “When it is a lean winter, it comes down from the mountains and leaves dead bodies wherever it goes.”
+> “The creature’s seasonal movements are easy to track, says Hynes. “When it is a lean winter, it comes down from the mountains and leaves dead bodies wherever it goes.”
 
 For more information about her research, visit [www.tylacoleo.com](http://www.Thylacoleo.com)

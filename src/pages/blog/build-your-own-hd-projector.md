@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Build your own HD projector"
 description: ""
-pubDate: "2006-12-14 11:43:49"
+pubDate: "2006-12-14T11:43:49.000Z"
 heroImage: ""
 slug: "build-your-own-hd-projector"
+tags: ["DIY","Tech"]
 ---
 
 Well this is the First in this series of Do it Yourself Projects, I am no the author of this article at least. This article was written by Will O'Brien, I found it interesting, so I posted it,

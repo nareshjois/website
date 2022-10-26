@@ -2,14 +2,13 @@
 layout: "../../layouts/BlogPost.astro"
 title: "A Single-Photon Server with Just One Atom"
 description: ""
-pubDate: "2007-03-20 09:43:47"
+pubDate: "2007-03-20T09:43:47.000Z"
 heroImage: ""
 slug: "a-single-photon-server-with-just-one-atom"
+tags: ["Science"]
 ---
 
 Every time you switch on a light bulb, 10 to the power of 15 (a million times a billion) visible photons, the elementary particles of light, are illuminating the room in every second. If that is too many for you, light a candle. If that is still too many, and say, you just want one and not more than one photon every time you press the button, you will have to work a little harder. A team of physicists in the group of Professor Gerhard Rempe at the Max Planck Institute of Quantum Optics in Garching near Munich, Germany, have now built a single-photon server based on a single trapped neutral atom. The high quality of the single photons and their ready availability are important for future quantum information processing experiments with single photons. In the relatively new field of quantum information processing the goal is to make use of quantum mechanics to compute certain tasks much more efficiently than with a classical computer. (Nature Physics online, March 11th, 2007)
-
-<img src="http://static.zooomr.com/images/823934_7476112fdd_m.jpg" alt="Single Photon Laser" />
 
 A single atom, by its nature, can only emit one photon at a time. A single photon can be generated at will by applying a laser pulse to a trapped atom. By putting a single atom between two highly reflective mirrors, a so called cavity, all of these photons are sent in the same direction. Compared with other methods of single-photon generation the photons are of a very high quality, i.e. their energy varies very little, and the properties of the photons can be controlled. They can for instance be made indistinguishable, a property necessary for quantum computation. On the other hand, up to now, it was not possible to trap a neutral atom in a cavity and at the same time generate single photons for a sufficiently long time to make practical usage of the photons.
 
@@ -19,7 +18,7 @@ The experiment uses a magneto-optical trap to prepare ultracold Rubidium atoms i
 
 With the progress reported now, quantum information processing with photons has come one step closer. With the single-photon server operating, Gerhard Rempe and his team are now ready to take on the next challenges such as deterministic atom-photon and atom-atom entanglement experiments.
 
-**Original work:**
+## riginal work:
 
 <span class="tx">Markus Hijlkema, Bernhard Weber, Holger P. Specht, Simon C. Webster, Axel Kuhn, Gerhard Rempe</span>
 <span class="e">A Single-Photon Server with Just One Atom</span>
