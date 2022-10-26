@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Could black holes be portals to other universes?"
 description: ""
-pubDate: "2007-04-30 23:20:46"
+pubDate: "2007-04-30T23:20:46Z"
 heroImage: ""
 slug: "could-black-holes-be-portals-to-other-universes"
+tags: ["Science"]
 ---
 
 The objects scientists think are black holes could instead be wormholes leading to other universes, a new study says. If so, it would help resolve a quantum conundrum known as the black hole information paradox, but critics say it would also raise new problems, such as how the wormholes would form in the first place.

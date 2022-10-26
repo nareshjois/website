@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Planet-hunters find bonanza of new solar systems"
 description: ""
-pubDate: "2007-06-04 11:17:31"
+pubDate: "2007-06-04T11:17:31Z"
 heroImage: ""
 slug: "planet-hunters-find-bonanza-of-new-solar-systems"
+tags: ["Science"]
 ---
 
 Planet-seekers who have spotted 28 new planets orbiting other stars in the past year say Earth's solar system is far from unique and there could be billions of habitable planets.

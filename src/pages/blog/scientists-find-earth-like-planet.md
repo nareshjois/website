@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Scientists find Earth-like planet"
 description: ""
-pubDate: "2007-04-25 18:20:01"
+pubDate: "2007-04-25T18:20:01.000Z"
 heroImage: ""
 slug: "scientists-find-earth-like-planet"
+tags: ["Science"]
 ---
 
 European astronomers have found the most Earth-like planet outside our solar system, and here's what it might be like to live there:
@@ -19,7 +20,7 @@ And that "just right" temperature is one key reason astronomers think this plane
 
 Astronomers who announced the discovery of the new planet Tuesday say this puts them closer to answering the cosmic question: Are we alone?
 
->It's a significant step on the way to finding possible life in the universe," said University of Geneva astronomer Michel Mayor, one of 11 European scientists on the team that found the new body. "It's a nice discovery. We still have a lot of questions."
+> It's a significant step on the way to finding possible life in the universe," said University of Geneva astronomer Michel Mayor, one of 11 European scientists on the team that found the new body. "It's a nice discovery. We still have a lot of questions."
 
 There's still a lot that is unknown about the new planet, which could be deemed inhospitable to life once more is learned about it. But as galaxies go, it's practically a neighbor. At only 120 trillion miles away, the red dwarf star that this planet circles is one of the 100 closest to Earth.
 
@@ -49,7 +50,7 @@ Eventually astronomers will rack up discoveries of dozens, maybe even hundreds o
 
 Besides having the right temperature, the new planet is probably full of liquid water, hypothesizes Stephane Udry, the discovery team's lead author and another Geneva astronomer. But that is based on theory about how planets form, not on any evidence, he said.
 
->Liquid water is critical to life as we know it," co-author Xavier Delfosse of Grenoble University in France, said in a statement. "Because of its temperature and relative proximity, this planet will most probably be a very important target of the future space missions dedicated to the search for extraterrestrial life. On the treasure map of the Universe, one would be tempted to mark this planet with an X.
+> Liquid water is critical to life as we know it," co-author Xavier Delfosse of Grenoble University in France, said in a statement. "Because of its temperature and relative proximity, this planet will most probably be a very important target of the future space missions dedicated to the search for extraterrestrial life. On the treasure map of the Universe, one would be tempted to mark this planet with an X.
 
 Other astronomers cautioned it's too early to tell whether there is water.
 

@@ -157,6 +157,15 @@ p:has(img) > img {
   margin: 1rem 0rem;
 }
 
+.poster-image {
+  float: left;
+}
+
+.poster-image > img {
+  height: 300px;
+  margin: 0rem 1rem;
+}
+
 
 .top-nav {
 

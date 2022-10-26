@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Strong evidence of wet past on Mars"
 description: ""
-pubDate: "2007-06-04 11:14:37"
-heroImage: ""
+pubDate: "2007-06-04T11:14:37.000Z"
+heroImage: "/content/images/2013/Dec/spirit_sillica.jpg"
 slug: "strong-evidence-of-wet-past-on-mars"
+tags: ["Science"]
 ---
 
 The Mars rover Spirit has uncovered the strongest evidence yet that the planet used to be wetter than previously thought, scientists reported Monday.
@@ -22,5 +23,5 @@ The durable Spirit and its twin, Opportunity, have been working on overtime sinc
 For eight months, Opportunity has explored the rim of Victoria Crater on the opposite side of the planet. Scientists are looking for a safe opening to send the rover in.
 
 The mission is managed at NASA's Jet Propulsion Laboratory in Pasadena.
-![](/content/images/2013/Dec/spirit_sillica.jpg)
+
 A patch of Martian soil analyzed by Spirit is rich in silica -- strong evidence the red planet was much wetter than it is now.
