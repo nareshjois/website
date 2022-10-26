@@ -1,0 +1,74 @@
+---
+export interface Props {
+	link: string;
+	description: string;
+}
+
+const { link, description } = Astro.props;
+import { fetchBookmarkData, fetchPageHtml  } from "../scripts/fetch-bookmark-data";
+const { url, body } = await fetchPageHtml(link);
+const result = await fetchBookmarkData(url, body)
+---
+<center>
+<div class="bookmark">
+    <div class="bookmark-info">
+        <a class="link" href={link}>{result.metadata.title}</a>
+        <div>{result.metadata.description}</div>
+    </div>
+    <div class="bookmark-image">
+        <img src={result.metadata.image}/>
+    </div>
+    <div class="bookmark-description">
+        {description}
+    </div>
+</div>
+</center>
+<style>
+    .bookmark {
+        width: 512px;
+        background-color: rgba(255,255,255,0.5);
+        border: 1px solid #fafafa;
+        box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%);
+        display: grid;
+        grid-template-columns: 1fr 128px;
+        grid-template-rows: 128px auto;
+        margin-bottom: 1rem;
+    }
+    .bookmark-info {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        display: flex;
+        flex-direction: column;
+    }
+    .bookmark-info > a {
+        text-decoration: none;
+        color: #636363;
+        font-size: 1.5rem;
+        padding: 0.5rem;
+        text-align: left;
+    }
+    .bookmark-info > div {
+        display: -webkit-box;
+        -webkit-line-clamp: 3;
+        -webkit-box-orient: vertical;  
+        overflow: hidden;
+        text-align: left;
+        font-size: 0.9rem;
+        line-height: 1.6rem;
+        padding: 0.5rem;
+    }
+    .bookmark-image {
+        grid-column: 2/3;
+        grid-row: 1/2;
+    }
+    .bookmark-image > img {
+        width: 128px;
+        height: 128px;
+    }
+    .bookmark-description {
+        border-top: 1px solid rgb(0 0 0 / 10%);
+        grid-column: 1/3;
+        padding: 5px;;
+        font-size: 1rem;
+    }
+</style>

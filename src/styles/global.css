@@ -155,11 +155,13 @@ h1 {
 
 p:has(img) {
   text-align: center;
+  max-width: 100%;
 }
 
 p:has(img) > img {
   border: 2px solid rgba(255, 255, 255, 0.75);
   margin: 1rem 0rem;
+  max-width: 100%;
 }
 
 .poster-image {
@@ -169,6 +171,10 @@ p:has(img) > img {
 .poster-image > img {
   height: 300px;
   margin: 0rem 1rem;
+}
+
+article > div > ul,ol {
+  margin-left: 1rem;
 }
 
 
