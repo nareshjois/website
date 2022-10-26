@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Asp.net Dyanamic Data : A leap for RAD"
 description: ""
-pubDate: "2011-06-23 11:59:41"
+pubDate: "2011-06-23T11:59:41.000Z"
 heroImage: ""
 slug: "asp-net-dyanamic-data-a-leap-for-rad"
+tags: [".net"]
 ---
 
 I have always basically forms over data for the longest period of time (LOB Apps) and most of the time its the same thing over and over again, Setup Database, create scaffolding forms for all the master tables and then move to the next steps, but wait there should be an easy way to this, In the MVC framework you can generate pages based on the model, but there are still a few things that you should wire up manually, enter dynamic data template and this feels like a magical unicorn at the beginning and once you dig deep into into it, its just beautiful, and will save a lot of steps for you.

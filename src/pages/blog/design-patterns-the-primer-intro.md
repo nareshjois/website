@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Software Design Patterns : The Primer : Introduction"
 description: ""
-pubDate: "2012-01-27 17:18:58"
+pubDate: "2012-01-27T17:18:58.000Z"
 heroImage: ""
 slug: "design-patterns-the-primer-intro"
+tags: [".net"]
 ---
 
 My primary work is designing. I earn my living by designing applications small and large. And because designing software more or less is bringing solution to problem, the steps you take also are similar. You break down the problem, you solve each piece using either your existing knowledge of learn from others and the complete the solution, you reuse the same methods to solve the same kind of problems. This is what is called a pattern,  a pattern is all about how you approach the problem, its not about semantics on how you solve a particular piece.

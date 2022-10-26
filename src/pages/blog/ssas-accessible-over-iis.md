@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Make SSAS Accessible over IIS"
 description: ""
-pubDate: "2012-11-06 16:12:18"
+pubDate: "2012-11-06T16:12:18.000Z"
 heroImage: ""
 slug: "ssas-accessible-over-iis"
+tags: ["SQL"]
 ---
 
 We are currently working on SSAS and building an analytics dashboard with custom charting and we are using Asp.net MVC for the web application part, ours being a small team, we have not setup Active Directory nor have we setup centralized Windows Authentication.

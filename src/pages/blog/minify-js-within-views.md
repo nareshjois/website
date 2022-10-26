@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Minify JS within Views"
 description: ""
-pubDate: "2013-12-10 20:06:10"
+pubDate: "2013-12-10T20:06:10.000Z"
 heroImage: ""
 slug: "minify-js-within-views"
+tags: [".net"]
 ---
 
 If you want to minify the JS within views

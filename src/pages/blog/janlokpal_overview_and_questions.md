@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Janlokpal Bill : An overview and my unanswered questions"
 description: ""
-pubDate: "2011-08-23 18:15:49"
+pubDate: "2011-08-23T18:15:49.000Z"
 heroImage: ""
 slug: "janlokpal_overview_and_questions"
+tags: ["Random"]
 ---
 
 I have been watching closely on what was happening with the entire process of fasts, demonstrations over Lokpal and Janlokpal bill, I went through the bullet points of Janlokpal bill and began wondering, how does this bill help in curbing corruption or for that matter bringing back the black money back to India, I have seen so many people get behind this movement most of them not knowing what the content of the bill is and how does it improve their lives, I know that people are fed up of corruption and want it rooted out but there is a lot more to this than just a bill.

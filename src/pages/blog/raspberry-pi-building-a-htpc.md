@@ -2,18 +2,16 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Raspberry Pi : Building a HTPC"
 description: ""
-pubDate: "2012-11-15 18:53:23"
-heroImage: ""
+pubDate: "2012-11-15T18:53:23.000Z"
+heroImage: "/content/images/2013/Dec/73870_512665275419832_1366435295_n.jpg"
 slug: "raspberry-pi-building-a-htpc"
+tags: ["DIY","Tech"]
 ---
 
 I recently brought a Raspberry Pi and I am making it my HTPC. I got a Model B 512MB from eBay US and a clear Case.
 
 The package was really simple
 
-![Raspberry Pi](/content/images/2013/Dec/73870_512665275419832_1366435295_n.jpg)
-
-&nbsp;
 
 I had gotten 3 extra Heat sinks and i put in 2 and put that in the Case
 

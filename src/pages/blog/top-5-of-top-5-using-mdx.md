@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Top 5 of Top 5 using MDX"
 description: ""
-pubDate: "2013-10-19 15:49:23"
+pubDate: "2013-10-19T15:49:23.000Z"
 heroImage: ""
 slug: "top-5-of-top-5-using-mdx"
+tags: ["MDX"]
 ---
 
 I have been playing around with dynamic MDX Generation for the BI Application that we have been working on and one of the most asked feature was Top5 of Top5 (eg: What are my Top 5 Products Sold in Top5 Stores). While trying to figure this out we had to re-write our MDX generator, but I feel that this solution can stay in the application for a long time to come.

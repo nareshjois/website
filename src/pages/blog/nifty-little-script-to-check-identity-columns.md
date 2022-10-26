@@ -2,13 +2,15 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Nifty Little script to check identity columns"
 description: ""
-pubDate: "2011-10-10 15:58:00"
+pubDate: "2011-10-10T15:58:00.000Z"
 heroImage: ""
 slug: "nifty-little-script-to-check-identity-columns"
+tags: ["SQL"]
 ---
 
 I had to recently check for identity specification on all the tables in a database and this nifty little script helped me in doing this.<div>Thanks Akshay for writing this for me.</div><div><br />
-<pre lang="sql">CREATE PROC dbo.CheckIdentities  
+```sql
+CREATE PROC dbo.CheckIdentities  
 AS  
 BEGIN  
  SET NOCOUNT ON  
@@ -35,5 +37,4 @@ BEGIN
  WHERE c.is_identity = 1  
  ORDER BY PercentageUsed DESC  
 END
-</pre>
-</div>
+```

@@ -2,9 +2,10 @@
 layout: "../../layouts/BlogPost.astro"
 title: "Recover Jobs from a crashed SQL Server"
 description: ""
-pubDate: "2011-10-11 15:58:00"
+pubDate: "2011-10-11T15:58:00.000Z"
 heroImage: ""
 slug: "recover-jobs-from-a-crashed-sql-server"
+tags: ["SQL"]
 ---
 
 I recently came across the scenario where a SQL server had crashed (with Windows) but the file system was intact, so we started restore of databases which was straight forward as easy as attaching to the new instance on different server. But we also had lot of jobs scheduled on the old server, and wanted to recover them as well, so after a doing a bit of search figured out that the jobs are saved in "msdb" system database.

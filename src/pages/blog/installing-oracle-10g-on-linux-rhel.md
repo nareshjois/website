@@ -25,7 +25,7 @@ Compute a cyclic redundancy check (CRC) checksum for the downloaded files and co
 
 Uncompress the downloaded file(s):
 ```bash
-gunzip ship.db.lnx32.cpio.gz</pre>
+gunzip ship.db.lnx32.cpio.gz
 ```
 Unpack <tt>ship.db.lnx32.cpio</tt>:
 ```bash
@@ -160,8 +160,9 @@ I don't know why the <tt>control-center</tt> RPM and the <tt>xscreensaver</tt> R
 
 ## Checking Kernel Parameters
 To see all kernel parameters, execute:
-<pre lang="bash">su - root
-sysctl -a</pre>
+```bash
+su - root
+sysctl -a
 For Oracle10g, the following kernel parameters have to be set to values greater than or equal to the recommended values which can be changed in the <tt>proc</tt> filesystem:
 ```bash
 shmmax  = 2147483648     (To verify, execute: cat /proc/sys/kernel/shmmax)
@@ -283,7 +284,8 @@ The standard directory name for Oracle10g is "app":
 ```
 Oracle recommends to use mount points such as <tt>/u01</tt>, <tt>/u02</tt>, etc. which complies with the OFA guidelines. But others can be used, for example:
 ```bash
-/<strong>disk_1</strong>/app/oracle/product/10.1.0/db_1</pre>
+/<strong>disk_1</strong>/app/oracle/product/10.1.0/db_1
+```
 The subtree for database files not stored in ASM disk groups should be named as follows:
 ```bash
 <strong>/u02</strong>/oradata/&lt;<em>db_name_1</em>&gt;
@@ -349,7 +351,9 @@ su - oracle
 oracle$ set
 ```
 To execute <tt>runInstaller</tt> from the mounted CD, run the following command as the <tt>oracle</tt> user:
-<pre lang="bash">oracle$ /media/cdrom/runInstaller</pre>
+```bash
+oracle$ /media/cdrom/runInstaller
+```
 <strong>Using Oracle Universal Installer (OUI)</strong>
 The following example shows how to install x86 Oracle 10g Release 1 Database Software and a "General Purpose" database:
 (<em>Note, the screens and questions will look different if you install 10g R2 or 64-bit 10g R1 database</em>)
@@ -361,7 +365,7 @@ The following example shows how to install x86 Oracle 10g Release 1 Database Sof
         - UNIX DBA Group:           Use default: <strong>dba</strong>
         - Create Starter Databases: I checked it for this example which is the default
         - Global Database Name:     orcl
-        - Database password:        password for SYS, SYSTEM, SYSMAN, and DBSNMP</pre>
+        - Database password:        password for SYS, SYSTEM, SYSMAN, and DBSNMP
 - Advanced Installation:    For this article I did not check it
 Click Next
 
