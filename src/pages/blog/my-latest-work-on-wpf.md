@@ -5,6 +5,7 @@ description: ""
 pubDate: "2009-01-02T23:49:24.000Z"
 heroImage: ""
 slug: "my-latest-work-on-wpf"
+tags: [".net"]
 ---
 
 WPF has been here for quite a while now and i done some basic projects on wpf, but for the last two months i had the opportunity to completely work on WPF, not just WPF but also used Linq2SQL as the base for the complete application, wet my hands with ADO.net Entity Model and lot of work in Expression Blend,

@@ -13,6 +13,7 @@ export interface Props {
     heroImage?: string;
     posterImage?: string;
     tags?: string[];
+    minutesRead?: string;
   };
 }
 
@@ -25,6 +26,7 @@ const {
     heroImage,
     posterImage,
     tags,
+    minutesRead
   },
 } = Astro.props;
 const date = dayjs(pubDate).format("YYYY, MMM DD");
@@ -32,18 +34,14 @@ const tagsString = (tags ?? []).join(" • ");
 ---
 
 <html lang="en">
-  <head>
-    <script
-      is:inline
-      src="https://kit.fontawesome.com/afa8e0f95c.js"
-      crossorigin="anonymous"
-    ></script>
+  <head>    
     <BaseHead title={title} description={description} />
   </head>
 
   <body>
     <canvas class="orb-canvas"></canvas>
     <Header />
+    <div class="blog-container">
     <HeroImage image={heroImage} />
     <main>
       <article>
@@ -57,6 +55,7 @@ const tagsString = (tags ?? []).join(" • ");
               </time>
             )
           }
+           • {minutesRead}
           {tagsString && <span> • {tagsString}</span>}
         </div>
         <div>
@@ -71,6 +70,14 @@ const tagsString = (tags ?? []).join(" • ");
         </div>
       </article>
     </main>
+  </div>
     <Footer />
   </body>
+  <style lang="scss">
+    .blog-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+  </style>
 </html>

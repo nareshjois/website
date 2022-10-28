@@ -13,7 +13,7 @@ We have all used grid view along with data sources but some time you need to to 
 A Simple grid  First column is a readonly templated field, second one a readonly bound field and third a templated entry field. At the Edit the edit command Field
 First Write a Function for loading data which will be reused on every action. I call it BindData()
 
-```aspx
+```xml
 <asp:GridView ID="GridView1" runat="server"  CssSelectorClass="PrettyGridView" PageSize="50" AllowSorting="True"   AutoGenerateColumns="False" EnableSortingAndPagingCallbacks="True">
    <columns>
    <asp:templatefield HeaderText="Center Id" SortExpression="center_Id">

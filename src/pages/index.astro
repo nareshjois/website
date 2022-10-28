@@ -1,52 +1,121 @@
 ---
-import BaseHead from '../components/BaseHead.astro';
-import Header from '../components/Header.astro';
-import Footer from '../components/Footer.astro';
-import { SITE_TITLE, SITE_DESCRIPTION } from '../config';
+import BaseHead from "../components/BaseHead.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
+import LogoAnimation from "../components/LogoAnimation";
+import Icon from "../components/icon.astro";
+const posts = (await Astro.glob("./blog/*.{md,mdx}"))
+  .sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  )
+  .splice(0, 6);
 ---
 
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<script is:inline src="https://kit.fontawesome.com/afa8e0f95c.js" crossorigin="anonymous"></script>
-		<BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-	</head>
-	<body>
-		<canvas class="orb-canvas"></canvas>
-		<Header title={SITE_TITLE} />
-		<main>
-			<h1>🧑‍🚀 Hello, Astronaut!</h1>
-			<p>
-				Welcome to the official <a href="https://astro.build/">Astro</a> blog starter template. This
-				template serves as a lightweight, minimally-styled starting point for anyone looking to build
-				a personal website, blog, or portfolio with Astro.
-			</p>
-			<p>
-				This template comes with a few integrations already configured in your
-				<code>astro.config.mjs</code> file. You can customize your setup with
-				<a href="https://astro.build/integrations">Astro Integrations</a> to add tools like Tailwind,
-				React, or Vue to your project.
-			</p>
-			<p>Here are a few ideas on how to get started with the template:</p>
-			<ul>
-				<li>Edit this page in <code>src/pages/index.astro</code></li>
-				<li>Edit the site header items in <code>src/components/Header.astro</code></li>
-				<li>Add your name to the footer in <code>src/components/Footer.astro</code></li>
-				<li>Check out the included blog posts in <code>src/pages/blog/</code></li>
-				<li>Customize the blog post page layout in <code>src/layouts/BlogPost.astro</code></li>
-			</ul>
-			<p>
-				Have fun! If you get stuck, remember to <a href="https://docs.astro.build/"
-					>read the docs
-				</a> or <a href="https://astro.build/chat">join us on Discord</a> to ask questions.
-			</p>
-			<p>
-				Looking for a blog template with a bit more personality? Check out <a
-					href="https://github.com/Charca/astro-blog-template"
-					>astro-blog-template
-				</a> by <a href="https://twitter.com/Charca">Maxi Ferreira</a>.
-			</p>
-		</main>
-		<Footer />
-	</body>
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+    <style lang="scss">
+      body {
+        scroll-snap-type: y mandatory;
+      }
+      .container {
+        display: flex;
+        justify-content: center;
+        .logo-container {
+          max-width: 1140px;
+          width: 100vw;
+          height: 100vh;
+          padding: 1em;
+          display: flex;
+          justify-content: center;
+          svg {
+            height: 100%;
+          }
+        }
+        main {
+          min-height: 20vh;
+		  padding: 4rem;
+          .desc {
+            margin-top: 2rem;
+            font-size: 1.5rem;
+          }
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <canvas class="orb-canvas"></canvas>
+    <div class="container">
+      <div class="logo-container">
+        <LogoAnimation />
+      </div>
+    </div>
+    <Header title={SITE_TITLE} />
+    <div class="container">
+      <main>
+        <h1>Naresh Jois</h1>
+        <div class="desc">
+          I work on building a data automation and decision intelligence
+          platform. Billion more things to learn, Games on Xbox, Playstation, PC
+          & Switch, Movie addict and typical Nerd who will correct you.
+        </div>
+      </main>
+    </div>
+    <div class="card-container">
+      <div id="cards">
+        {
+          posts.map((post: any) => {
+            let image = post.frontmatter.heroImage;
+            if (!image) {
+              image = post.frontmatter.posterImage;
+            }
+            return (
+              <div class="card" data-url={post.url}>
+                <div class="card-content">
+                  {image && (
+                    <div
+                      class="card-image"
+                      style={`background-image: url(${image})`}
+                    />
+                  )}
+                  <div class="card-title">{post.frontmatter.title}</div>
+                  <div class="card-additional">
+                    <time datetime={post.frontmatter.pubDate}>
+                      {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                        "en-us",
+                        {
+                          year: "numeric",
+                          month: "short",
+                          day: "numeric",
+                        }
+                      )}
+                    </time>
+                    •{post.frontmatter.minutesRead}•
+                    {(post.frontmatter.tags ?? []).join(" • ")}
+                  </div>
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+    </div>
+    <div class="page-navigation">
+      <a class="nav-button next" href="/blog/pages/2">
+        <Icon icon="arrow-right" size="18" />
+      </a>
+    </div>
+    <Footer />
+	<script>
+		for (const card of document.getElementsByClassName("card") as HTMLCollectionOf<HTMLDivElement>) {
+        card.onclick = function() {
+            window.location.href = card.dataset["url"] as string;
+        };
+      }
+	</script>
+  </body>
 </html>

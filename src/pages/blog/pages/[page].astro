@@ -1,0 +1,92 @@
+---
+import BaseHead from "../../../components/BaseHead.astro";
+import Header from "../../../components/Header.astro";
+import Footer from "../../../components/Footer.astro";
+import { SITE_TITLE, SITE_DESCRIPTION } from "../../../config";
+import type { GetStaticPathsOptions } from "astro";
+import Icon from "../../../components/icon.astro";
+// Use Astro.glob() to fetch all posts, and then sort them by date.
+
+export async function getStaticPaths({ paginate }: GetStaticPathsOptions) {
+  const posts = (await Astro.glob("../*.{md,mdx}")).sort(
+    (a, b) =>
+      new Date(b.frontmatter.pubDate).valueOf() -
+      new Date(a.frontmatter.pubDate).valueOf()
+  );
+  return paginate(posts, { pageSize: 6 });
+}
+const { page } = Astro.props;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <canvas class="orb-canvas"></canvas>
+    <Header />
+    <div class="card-container">
+      <div id="cards">
+        {
+          page.data.map((post: any) => {
+            let image = post.frontmatter.heroImage;
+            if (!image) {
+                image = post.frontmatter.posterImage;
+            }                     
+            return <div class="card" data-url={post.url}>
+              <div class="card-content">
+                {image && <div class="card-image" style={`background-image: url(${image})`}></div>}
+                <div class="card-title">
+                  {post.frontmatter.title}                  
+                </div>
+                <div class="card-additional">
+                    <time datetime={post.frontmatter.pubDate}>
+                    {new Date(post.frontmatter.pubDate).toLocaleDateString(
+                      "en-us",
+                      {
+                        year: "numeric",
+                        month: "short",
+                        day: "numeric",
+                      }
+                    )}
+                  </time>
+                  •
+                  {post.frontmatter.minutesRead} 
+                  •
+                  {(post.frontmatter.tags ?? []).join(" • ")}
+                  </div>
+              </div>
+            </div>
+        })
+        }
+      </div>
+    </div>
+    <div class="page-navigation">
+        {page.url.prev && <a class="nav-button prev" href={page.url.prev}><Icon icon="arrow-left" size="18"/></a>}
+        Page {page.currentPage} of {page.lastPage}
+        {page.url.next && <a class="nav-button next" href={page.url.next}><Icon icon="arrow-right" size="18"/></a>}
+    </div>
+    <Footer />
+    <script>
+      document.getElementById("cards")!.onmousemove = (e) => {
+        for (const card of document.getElementsByClassName(
+          "card"
+        ) as HTMLCollectionOf<HTMLDivElement>) {
+          const rect = card.getBoundingClientRect(),
+            x = e.clientX - rect.left,
+            y = e.clientY - rect.top;
+
+          card.style?.setProperty("--mouse-x", `${x}px`);
+          card.style?.setProperty("--mouse-y", `${y}px`);
+        }
+      };
+      for (const card of document.getElementsByClassName("card") as HTMLCollectionOf<HTMLDivElement>) {
+        card.onclick = function() {
+            window.location.href = card.dataset["url"] as string;
+        };
+      }
+      
+    </script>
+  </body>
+</html>

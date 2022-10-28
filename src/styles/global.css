@@ -10,6 +10,18 @@
     hsl(var(--hue), 95%, 99%),
     hsl(var(--hue), 95%, 84%)
   );
+  --card-color: rgb(255, 255, 255, 0.5);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 * {
@@ -25,8 +37,8 @@ html {
 
 body {
   min-height: 100vh;
-  display: grid;
-  grid-template-rows: 100px auto 1fr 80px;
+  display: flex;
+  flex-direction: column;
   font-family: var(--font-family);
   color: var(--dark-color);
   background: var(--bg-gradient);
@@ -42,7 +54,6 @@ body {
   z-index: -1;
 }
 header {
-  grid-row: 1/2;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -53,6 +64,7 @@ header {
   max-width: 1140px;
   margin: 2rem;
   margin-bottom: 0px;
+  animation: 1s ease-out 0s 1 slideIn;
 }
 .hero-image + main {
   margin-top: -5px;
@@ -70,6 +82,7 @@ main {
   border-radius: 0.2rem;
   border: 1px solid rgba(255, 255, 255, 0.125);
   flex-direction: column;
+  animation: 1s ease-out 0s 1 slideIn;
 }
 
 .hero-image > img {
@@ -133,6 +146,7 @@ h1 {
     var(--base) 0%,
     var(--complimentary2)
   );
+  background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   -moz-background-clip: text;
@@ -183,12 +197,13 @@ article > div > ul,ol {
 .gist-data {max-height: 800px;max-width: 800px;}
 
 .top-nav {
-
   background-color: #ffffff66;
-  /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   color: #0a0a0a;
   box-shadow: 0 0.75rem 2rem 0 rgb(0 0 0 / 10%);
   height: 70px;
+  position: -webkit-sticky; /* Safari */
+  position: sticky;
+  top: 0;
 }
 
 .top-nav > .inner {
@@ -315,17 +330,131 @@ article > div > ul,ol {
   }
 }
 
-/*
-.poster-image {
-  padding: 1rem;
-  float: left;
+.card-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
 }
-.hero-image {
-  width: 100%;
+#cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;  
   max-width: 1140px;
+  width: 100%;
+  justify-content: center;
 }
 
-article img {
-  max-width: 100%;
+#cards:hover > .card::after {
+  opacity: 1;
 }
-*/
+
+#cards > .card {
+  border-radius: 10px;
+  cursor: pointer;
+  display: flex;
+  height: 400px;
+  flex-direction: column;
+  position: relative;
+  width: 366px;  
+  background: rgba(255, 255, 255, 0.375);
+  box-shadow: 0 0.75rem 2rem 0 rgba(0, 0, 0, 0.1);
+  border-radius: 0.2rem;
+  transition: all .25s cubic-bezier(.02,.01,.47,1);
+  animation: 1s ease-out 0s 1 slideIn;
+}
+
+#cards > .card:hover {
+  box-shadow: 0 1.75rem 4rem 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+#cards > .card:hover::before {
+  opacity: 1;
+}
+
+#cards > .card::before,
+#cards > .card::after {
+  border-radius: inherit;
+  content: "";
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  transition: opacity 500ms;
+  width: 100%;
+}
+
+#cards > .card::before {
+  background: radial-gradient(
+    800px circle at var(--mouse-x) var(--mouse-y), 
+    hsl(var(--hue-complimentary2), 95%, 99%),
+    transparent 80%
+  );
+  z-index: 3;
+}
+
+
+#cards > .card::after {  
+  background: radial-gradient(
+    600px circle at var(--mouse-x) var(--mouse-y) , 
+    hsl(var(--hue-complimentary2), 95%, 99%),
+    transparent 40%
+  );
+  z-index: 1;
+}
+
+#cards > .card > .card-content {
+  background-color: var(--card-color);
+  border-radius: inherit;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  inset: 1px;
+  padding: 1.5rem;
+  position: absolute;
+  z-index: 2;
+  justify-content: space-between;
+}
+
+.card-title {
+  font-size: 2rem;
+}
+.card-title > time {
+  font-size: 0.5rem;
+}
+.card-image {
+  height: 220px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: -1.5rem;
+}
+.page-navigation {
+  display: flex;
+  justify-content: center;
+  padding: 2rem;
+  font-size: 1rem;
+  align-items: center;
+}
+
+.page-navigation > .nav-button {
+  background: rgba(255, 255, 255, 0.375);
+  text-decoration: none;
+  border-radius: 24px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  color: #333;
+  transition: all .25s cubic-bezier(.02,.01,.47,1);
+  animation: 1s ease-out 0s 1 slideIn;
+}
+
+.page-navigation > .nav-button:hover {
+  box-shadow: 0 1.75rem 4rem 0 rgba(0, 0, 0, 0.1);
+  transform: translateY(-3px);
+  
+}

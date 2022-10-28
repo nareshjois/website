@@ -12,7 +12,7 @@ const result = await fetchBookmarkData(url, body)
 <center>
 <div class="bookmark">
     <div class="bookmark-info">
-        <a class="link" href={link}>{result.metadata.title}</a>
+        <a class="link" target="_blank" href={link}>{result.metadata.title}</a>
         <div>{result.metadata.description}</div>
     </div>
     <div class="bookmark-image">
