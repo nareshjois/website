@@ -51,7 +51,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
     <canvas class="orb-canvas"></canvas>
     <div class="container">
       <div class="logo-container">
-        <LogoAnimation />
+        <LogoAnimation client:load />
       </div>
     </div>
     <Header title={SITE_TITLE} />
