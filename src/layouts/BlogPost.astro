@@ -20,7 +20,6 @@ export interface Props {
 const {
   content: {
     title,
-    description,
     pubDate,
     updatedDate,
     heroImage,
@@ -35,7 +34,7 @@ const tagsString = (tags ?? []).join(" • ");
 
 <html lang="en">
   <head>    
-    <BaseHead title={title} description={description} />
+    <BaseHead title={title} description={`${date}: ${tagsString}: Thoughts and ideas on ${title}`} image={heroImage ? heroImage : "/placeholder-social.jpg"} />
   </head>
 
   <body>
