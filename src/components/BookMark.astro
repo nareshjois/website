@@ -3,7 +3,7 @@ export interface Props {
 	link: string;
 	description: string;
 }
-
+import { Image } from '@astrojs/image/components';
 const { link, description } = Astro.props;
 import { fetchBookmarkData, fetchPageHtml  } from "../scripts/fetch-bookmark-data";
 const { url, body } = await fetchPageHtml(link);
@@ -16,7 +16,7 @@ const result = await fetchBookmarkData(url, body)
         <div>{result.metadata.description}</div>
     </div>
     <div class="bookmark-image">
-        <img src={result.metadata.image}/>
+        <Image src={result.metadata.image} alt={result.metadata.title} width={128} height={128} format="jpg" />
     </div>
     <div class="bookmark-description">
         {description}
