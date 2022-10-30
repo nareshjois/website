@@ -88,12 +88,6 @@ main {
 .hero-image > img {
   width: 100%;
 }
-@media (max-width: 960px) {
-  main {
-    padding: 4rem 4rem;
-    margin: 1rem;
-  }
-}
 
 article {
   line-height: 1.5rem;
@@ -204,7 +198,10 @@ article > div > ul,ol {
   position: -webkit-sticky; /* Safari */
   position: sticky;
   top: 0;
+  z-index: 100;
 }
+
+
 
 .top-nav > .inner {
   max-width: 1140px;
@@ -334,6 +331,7 @@ article > div > ul,ol {
   height: 100%;
   display: flex;
   justify-content: center;
+  margin-top: 2rem;
 }
 #cards {
   display: flex;
@@ -457,4 +455,21 @@ article > div > ul,ol {
   box-shadow: 0 1.75rem 4rem 0 rgba(0, 0, 0, 0.1);
   transform: translateY(-3px);
   
+}
+
+
+@media (max-width: 960px) {
+  main {
+    padding: 4rem 4rem;
+    margin: 1rem;
+  }
+}
+
+@media(max-width: 745px) {
+  main.index {
+    width: 366px;
+  }
+  .top-nav {
+    background-color: #ffffff;
+  }
 }

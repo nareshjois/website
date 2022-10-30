@@ -20,6 +20,10 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
     <style lang="scss">
       body {
+        display: grid;
+        grid-auto-flow: row;
+        overscroll-behavior-y: contain;
+        scroll-snap-align: start;
         scroll-snap-type: y mandatory;
       }
       .container {
@@ -38,13 +42,16 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
         }
         main {
           min-height: 20vh;
-		  padding: 4rem;
+		      padding: 4rem;
           .desc {
             margin-top: 2rem;
             font-size: 1.5rem;
           }
         }
       }
+      .page-navigation {
+          margin-top: 2rem;
+        }
     </style>
   </head>
   <body>
@@ -56,7 +63,7 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
     </div>
     <Header title={SITE_TITLE} />
     <div class="container">
-      <main>
+      <main class="index">
         <h1>Naresh Jois</h1>
         <div class="desc">
           I work on building a data automation and decision intelligence
@@ -65,7 +72,11 @@ const posts = (await Astro.glob("./blog/*.{md,mdx}"))
         </div>
       </main>
     </div>
+    <div class="card-container" style="display: flex; flex-direction: column">
+      <h1>Recent Blogs</h1>
+    </div> 
     <div class="card-container">
+      
       <div id="cards">
         {
           posts.map((post: any) => {
