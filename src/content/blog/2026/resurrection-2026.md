@@ -10,7 +10,7 @@ tags: ["Meta"]
 
 ## Dusting Off the Digital Cobwebs: We’re 20!
 
-Holy pixels, Batman. I just checked the registration date on this place and realized this website is now **20 years old**.
+Holy pixels, Batman. I just checked the registration date on this place and realized this site is now **20 years old**.
 
 To put that in perspective: when this domain was born, Pluto was still a planet, people were unironically wearing shutter shades, and "tweeting" was something only birds did. This site has officially survived long enough to have a mid-life crisis, buy a leather jacket, and start listening to "classic rock" from 2006.
 
@@ -37,4 +37,4 @@ Stay tuned. The comeback is real, and it’s going to be at least 20% less awkwa
 
 I also realized that to the Gen-Z crowd, a "blog post" probably sounds like some ancient, forbidden ritual. For the uninitiated: a blog is basically a Twitter thread, but it doesn't cap my rambling at 280 characters, there’s no "For You" page algorithm shoving salad recipes down your throat, and—get this—you actually have to read it.
 
-I know, I know. "Where is the Subway Surfers gameplay at the bottom of the screen to keep my attention?" Nowhere. It’s just me and my syntax. It's vintage. It's "retro-core." Tell your friends.
+I know, I know. "Where is the Subway Surfers gameplay at the bottom of the screen to keep my attention?" Nowhere. It’s just me and my syntax. It's vintage. It's "retro-core".
