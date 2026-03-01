@@ -1,139 +1,26 @@
 ---
 import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
 import Footer from "../components/Footer.astro";
-import { SITE_TITLE, SITE_DESCRIPTION } from "../config";
-import LogoAnimation from "../components/LogoAnimation";
-import Icon from "../components/icon.astro";
-const posts = (await Astro.glob("./blog/*.{md,mdx}"))
-  .sort(
-    (a, b) =>
-      new Date(b.frontmatter.pubDate).valueOf() -
-      new Date(a.frontmatter.pubDate).valueOf()
-  )
-  .splice(0, 6);
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import LogoAnimation from "../components/ui/logo";
+import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
 ---
 
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
-    <style lang="scss">
-      body {
-        display: grid;
-        grid-auto-flow: row;
-        overscroll-behavior-y: contain;
-        scroll-snap-align: start;
-        scroll-snap-type: y mandatory;
-      }
-      .container {
-        display: flex;
-        justify-content: center;
-        .logo-container {
-          max-width: 1140px;
-          width: 100vw;
-          height: 100vh;
-          padding: 1em;
-          display: flex;
-          justify-content: center;
-          svg {
-            height: 100%;
-          }
-        }
-        main {
-          min-height: 20vh;
-		      padding: 4rem;
-          .desc {
-            margin-top: 2rem;
-            font-size: 1.5rem;
-          }
-        }
-      }
-      .page-navigation {
-          margin-top: 2rem;
-        }
-    </style>
   </head>
   <body>
-    <canvas class="orb-canvas"></canvas>
-    <div class="container">
-      <div class="logo-container">
-        <LogoAnimation client:load />
-      </div>
-    </div>
-    <Header title={SITE_TITLE} />
-    <div class="container">
-      <main class="index">
-        <h1>Naresh Jois</h1>
-        <div class="desc">
-          I work on building a data automation and decision intelligence
-          platform. Billion more things to learn, Games on Xbox, Playstation, PC
-          & Switch, Movie addict and typical Nerd who will correct you.
-        </div>
+    <BackgroundGradientAnimation client:only>
+      <Header />
+      <main>
+		<div class="w-full h-screen flex items-center justify-center px-4">
+        	<LogoAnimation client:only className="w-full h-auto max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl" />
+		</div>
       </main>
-    </div>
-    <div class="card-container" style="display: flex; flex-direction: column">
-      <h1>Recent Blogs</h1>
-    </div> 
-    <div class="card-container">
-      
-      <div id="cards">
-        {
-          posts.map((post: any) => {
-            let image = post.frontmatter.heroImage;
-            if (!image) {
-              image = post.frontmatter.posterImage;
-            }
-            return (
-              <div class="card" data-url={post.url}>
-                <div class="card-content">
-                  {image && (
-                    <div
-                      class="card-image"
-                      style={`background-image: url(${image})`}
-                    />
-                  )}
-                  <div class="card-title">{post.frontmatter.title}</div>
-                  <div class="card-additional">
-                    <time datetime={post.frontmatter.pubDate}>
-                      {new Date(post.frontmatter.pubDate).toLocaleDateString(
-                        "en-us",
-                        {
-                          year: "numeric",
-                          month: "short",
-                          day: "numeric",
-                        }
-                      )}
-                    </time>
-                    •{post.frontmatter.minutesRead}•
-                    {(post.frontmatter.tags ?? []).join(" • ")}
-                  </div>
-                </div>
-              </div>
-            );
-          })
-        }
-      </div>
-    </div>
-    <div class="page-navigation">
-      <a class="nav-button next" href="/blog/pages/2">
-        <Icon icon="arrow-right" size="18" />
-      </a>
-    </div>
-    <Footer />
-	<script>
-		for (const card of document.getElementsByClassName("card") as HTMLCollectionOf<HTMLDivElement>) {
-        card.onclick = function() {
-            window.location.href = card.dataset["url"] as string;
-        };
-      }
-	</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3VGCPWP72"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Q3VGCPWP72');
-</script>
+      <Footer />
+    </BackgroundGradientAnimation>
   </body>
 </html>

@@ -1,89 +1,50 @@
 ---
-import BaseHead from "../components/BaseHead.astro";
-import Header from "../components/Header.astro";
-import Footer from "../components/Footer.astro";
-import HeroImage from "../components/HeroImage.astro";
-import dayjs from "dayjs";
-export interface Props {
-  content: {
-    title: string;
-    description: string;
-    pubDate?: string;
-    updatedDate?: string;
-    heroImage?: string;
-    posterImage?: string;
-    tags?: string[];
-    minutesRead?: string;
-  };
-}
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { BackgroundGradientAnimation } from '../components/ui/background-gradient-animation';
 
-const {
-  content: {
-    title,
-    pubDate,
-    updatedDate,
-    heroImage,
-    posterImage,
-    tags,
-    minutesRead
-  },
-} = Astro.props;
-const date = dayjs(pubDate).format("YYYY, MMM DD");
-const tagsString = (tags ?? []).join(" • ");
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
 ---
 
 <html lang="en">
-  <head>    
-    <BaseHead title={title} description={`${date}: ${tagsString}: Thoughts and ideas on ${title}`} image={heroImage ? heroImage : "/placeholder-social.jpg"} />
-  </head>
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
 
-  <body>
-    <canvas class="orb-canvas"></canvas>
-    <Header />
-    <div class="blog-container">
-    <HeroImage image={heroImage} />
-    <main>
-      <article>
-        <h1 class="title">{title}</h1>
-        <div class="article-date">
-          {date && <time>{date}</time>}
-          {
-            updatedDate && (
-              <time>
-                Last updated on <time>{updatedDate}</time>
-              </time>
-            )
-          }
-           • {minutesRead}
-          {tagsString && <span> • {tagsString}</span>}
-        </div>
-        <div>
-          {
-            posterImage && (
-              <div class="poster-image">
-                <img src={posterImage} alt={title} />
-              </div>
-            )
-          }
-          <slot />
-        </div>
-      </article>
-    </main>
-  </div>
-    <Footer />
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Q3VGCPWP72"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-Q3VGCPWP72');
-</script>
-  </body>
-  <style lang="scss">
-    .blog-container {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-  </style>
+	<body>
+		<BackgroundGradientAnimation client:only>
+			<Header />
+			<main class="pt-20 max-w-5xl mx-auto">
+				<article class="relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm min-h-50 flex flex-col items-center justify-center text-white">
+						<div class="hero-image">
+						{heroImage && <Image width={1020} height={510} class="rounded-xl" src={heroImage} alt="" />}
+					</div>
+					<div class="p-8">
+						<h1 class="text-2xl font-bold">{title}</h1>
+						<div class="text-sm text-white/70">
+							<FormattedDate date={pubDate} />
+							{
+								updatedDate && (
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							}
+						</div>
+						<hr class="my-4" />
+						<div class="prose prose-invert max-w-none">
+							<slot />
+						</div>
+					</div>
+				</article>
+			</main>
+			<Footer />
+		</BackgroundGradientAnimation>
+	</body>
 </html>

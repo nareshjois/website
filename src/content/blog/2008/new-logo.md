@@ -1,0 +1,11 @@
+---
+title: "I have got a new logo"
+description: ""
+pubDate: "2008-12-16T23:49:21.000Z"
+heroImage: "/content/images/2013/Dec/128x128.png"
+slug: "258"
+tags: ["Random"]
+---
+
+I have gone through and updated my ever-used logo. This has a bit more depth and zing to it. Background as usual is blue, and I have added some rays and some bubbles.
+
