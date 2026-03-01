@@ -1,0 +1,48 @@
+---
+title: "Deferred Support for AmplifyJs"
+description: ""
+pubDate: "2013-03-11T13:25:08.000Z"
+heroImage: ""
+slug: "deferred-support-for-amplifyjs"
+tags: ["JS"]
+---
+
+Working with AmplifyJs has been great, It reduces a lot of caching headaches. We are using amplifyjs in conjunction with Durandal, and Durandal uses jQuery deferreds and the logical step would be to have amplify requests be deferreds. 
+As Amplifyjs was built with the intention of not having jQuery as a Dependency, the deferred support is not included out of the box, but to introduce that is very simple,
+
+Put this in before the making a request and you are good to go
+
+```javascript
+(function (amplify, $, undefined) {
+	var properties = [ "types", "resources", "define", "decoders" ];
+	amplify.request_original = amplify.request;
+	amplify.request = function(resourceId, data) {
+		var dfd = $.Deferred();
+
+		amplify.request_original({
+			resourceId: resourceId,
+			data: data,
+			success: dfd.resolve,
+			error: dfd.reject
+		});
+
+		return dfd.promise();
+	};
+
+	$.each( properties, function( index, key ) {
+		amplify.request[ key ] = amplify.request_original[ key ];
+	});
+})(amplify,jQuery);
+```
+
+and you can make request like 
+
+```javascript
+ $.when(
+        amplify.request("resourceId1"),
+        amplify.request("resourceId2")
+ ).then(function(response1, response2) {
+     //do Something with response1.data
+ });
+```
+Source : <a href="http://www.elijahmanor.com/2012/10/adding-jquery-deferred-support-to.html">http://www.elijahmanor.com/2012/10/adding-jquery-deferred-support-to.html</a>

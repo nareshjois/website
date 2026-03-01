@@ -1,0 +1,8 @@
+---
+import { SITE_TITLE } from '../consts';
+import HeaderWithTabs from './ui/header';
+
+const pathname = Astro.url.pathname;
+---
+
+<HeaderWithTabs client:load pathname={pathname} />

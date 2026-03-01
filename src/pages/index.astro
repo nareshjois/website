@@ -1,0 +1,26 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+import LogoAnimation from "../components/ui/logo";
+import { BackgroundGradientAnimation } from "../components/ui/background-gradient-animation";
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body>
+    <BackgroundGradientAnimation client:only>
+      <Header />
+      <main>
+		<div class="w-full h-screen flex items-center justify-center px-4">
+        	<LogoAnimation client:only className="w-full h-auto max-w-md sm:max-w-xl md:max-w-2xl lg:max-w-4xl" />
+		</div>
+      </main>
+      <Footer />
+    </BackgroundGradientAnimation>
+  </body>
+</html>

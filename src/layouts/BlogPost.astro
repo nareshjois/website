@@ -1,0 +1,50 @@
+---
+import { Image } from 'astro:assets';
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import FormattedDate from '../components/FormattedDate.astro';
+import Header from '../components/Header.astro';
+import { BackgroundGradientAnimation } from '../components/ui/background-gradient-animation';
+
+type Props = CollectionEntry<'blog'>['data'];
+
+const { title, description, pubDate, updatedDate, heroImage } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={description} />
+	</head>
+
+	<body>
+		<BackgroundGradientAnimation client:only>
+			<Header />
+			<main class="pt-20 max-w-5xl mx-auto">
+				<article class="relative rounded-xl border border-white/10 bg-white/5 backdrop-blur-sm min-h-50 flex flex-col items-center justify-center text-white">
+						<div class="hero-image">
+						{heroImage && <Image width={1020} height={510} class="rounded-xl" src={heroImage} alt="" />}
+					</div>
+					<div class="p-8">
+						<h1 class="text-2xl font-bold">{title}</h1>
+						<div class="text-sm text-white/70">
+							<FormattedDate date={pubDate} />
+							{
+								updatedDate && (
+									<div class="last-updated-on">
+										Last updated on <FormattedDate date={updatedDate} />
+									</div>
+								)
+							}
+						</div>
+						<hr class="my-4" />
+						<div class="prose prose-invert max-w-none">
+							<slot />
+						</div>
+					</div>
+				</article>
+			</main>
+			<Footer />
+		</BackgroundGradientAnimation>
+	</body>
+</html>
