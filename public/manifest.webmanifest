@@ -1,0 +1,17 @@
+{
+  "name": "Naresh Jois",
+  "short_name": "Naresh Jois",
+  "description": "Blogs and monstly ramblings",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#001152",
+  "theme_color": "#001152",
+  "icons": [
+    {
+      "src": "/apple-touch-icon.png",
+      "sizes": "260x260",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
