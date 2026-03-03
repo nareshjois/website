@@ -228,6 +228,10 @@
   * {
     @apply border-border outline-ring/50;
   }
+  html {
+    /* Match gradient background for iOS notch/safe areas (viewport-fit=cover) */
+    background-color: #001152;
+  }
   body {
     @apply bg-background text-foreground;
   }
