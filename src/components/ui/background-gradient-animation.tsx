@@ -128,6 +128,15 @@ export const BackgroundGradientAnimation = ({
 
   return (
     <AnimationsOffContext.Provider value={{ animationsOff, setAnimationsOff }}>
+      {/* Solid-color strips for Safari iOS 26+ toolbar tinting (samples fixed elements near edges) */}
+      <div
+        className="fixed top-0 left-0 right-0 h-1 min-h-[4px] w-full pointer-events-none z-0 bg-[#001152]"
+        aria-hidden
+      />
+      <div
+        className="fixed bottom-0 left-0 right-0 h-[3px] min-h-[3px] w-full pointer-events-none z-0 bg-[#001152]"
+        aria-hidden
+      />
       <div
         className={cn(
           "fixed inset-0 min-h-[100dvh] w-screen pointer-events-none bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",

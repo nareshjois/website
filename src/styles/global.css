@@ -233,7 +233,9 @@
     background-color: #001152;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply text-foreground;
+    /* So Safari (especially iOS 26+) uses this when sampling for toolbar tint */
+    background-color: #001152;
   }
 }
 
