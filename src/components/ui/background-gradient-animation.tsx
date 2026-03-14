@@ -130,7 +130,7 @@ export const BackgroundGradientAnimation = ({
     <AnimationsOffContext.Provider value={{ animationsOff, setAnimationsOff }}>
       <div
         className={cn(
-          "fixed top-0 left-0 h-screen w-screen pointer-events-none bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
+          "fixed inset-0 min-h-[100dvh] w-screen pointer-events-none bg-[linear-gradient(40deg,var(--gradient-background-start),var(--gradient-background-end))]",
           containerClassName
         )}
       >
