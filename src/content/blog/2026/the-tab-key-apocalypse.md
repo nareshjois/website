@@ -1,5 +1,5 @@
 ---
-## title: "The ‘Tab-Key’ Apocalypse"
+title: "The ‘Tab-Key’ Apocalypse"
 description: "Why I’m Coming Back to a World of Code-Bot Overlords"
 pubDate: "2026-03-14T11:02:23.000Z"
 heroImage: "/content/images/2026/03/tab-key-apocalypse.png"
